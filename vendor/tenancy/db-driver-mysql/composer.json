@@ -1,0 +1,41 @@
+{
+    "name": "tenancy/db-driver-mysql",
+    "description": "The tenancy/tenancy database driver for mysql",
+    "keywords": ["database", "tenancy", "mysql", "mariadb"],
+    "license": "MIT",
+    "require": {
+        "tenancy/framework": "*",
+        "tenancy/hooks-database": "*",
+        "tenancy/affects-connections": "*",
+        "doctrine/dbal": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tenancy\\Database\\Drivers\\Mysql\\": ""
+        }
+    },
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/tenancy"
+        },
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/tenancy"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Arlon Antonius",
+            "email": "opensource@arlon.dev",
+            "homepage": "https://arlon.dev"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tenancy\\Database\\Drivers\\Mysql\\Provider"
+            ]
+        }
+    }
+}

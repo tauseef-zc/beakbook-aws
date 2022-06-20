@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./src/</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="Installation Test Suite">
+            <file>./tests/unit-tests/InstallationTest.php</file>
+        </testsuite>
+        <testsuite name="Continued Test Suite">
+            <directory suffix=".php">./tests/unit-tests/</directory>
+            <exclude>./tests/unit-tests/InstallationTest.php</exclude>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="APP_KEY" value="Phei9thoong3ai8aqu4ieHie6kee1zee"/>
+        <env name="DB_DATABASE" value="tenancy"/>
+        <env name="DB_PASSWORD" value=""/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="MAIL_MAILER" value="log"/>
+        <env name="LIMIT_UUID_LENGTH_32" value="1"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="TENANCY_DATABASE_AUTO_DELETE" value="1"/>
+        <env name="TENANCY_DATABASE_AUTO_DELETE_USER" value="1"/>
+        <env name="TENANCY_DEFAULT_HOSTNAME" value="local.testing"/>
+        <env name="TENANCY_SYSTEM_CONNECTION_NAME" value="mysql"/>
+    </php>
+</phpunit>
